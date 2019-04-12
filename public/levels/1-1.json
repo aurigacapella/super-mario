@@ -361,11 +361,27 @@
     "entities": [
         {
             "name": "koopa",
-            "pos": [260, 0]
-        },
+            "pos": [16, 0]
+        },   
         {
             "name": "goomba",
-            "pos": [220, 0]
+            "pos": [13, 0]
+        },
+        {
+            "name": "coin",
+            "pos": [15, 0]
+        },
+        {
+            "name": "coin",
+            "pos": [43, 12]
+        },
+        {
+            "name": "coin",
+            "pos": [42, 12]
+        },
+        {
+            "name": "coin",
+            "pos": [41, 12]
         }
     ]
 }

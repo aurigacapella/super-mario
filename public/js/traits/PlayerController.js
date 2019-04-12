@@ -7,6 +7,7 @@ export default class PlayerController extends Trait {
         this.checkpoint = new Vec2(0, 0);
         this.player = null;
         this.score = 0;
+        this.coins = 0;
         this.time = 300;
     }
 
@@ -15,7 +16,15 @@ export default class PlayerController extends Trait {
 
         this.player.stomper.onStomp = () => {
             this.score += 100;
-        }
+        };
+
+        this.player.coincollector.onCollect = () => {
+            // The Centralized Galactic Goverment Currency's value is one of itself
+            this.coins += 1;
+
+            // Coins are worth 200 points each
+            this.score += 200;
+        };
     }
 
     update(entity, deltaTime, level) {

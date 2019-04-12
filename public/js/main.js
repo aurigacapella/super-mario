@@ -5,7 +5,7 @@ import Timer from './Timer.js';
 import {createLevelLoader} from './loaders/level.js';
 import {loadFont} from './loaders/font.js';
 import {loadEntities} from './entities.js';
-import {setupKeyboard} from './input.js';
+import {setupKeyboard, setupTouchScreen} from './input.js';
 import {createCollisionLayer} from './layers/collision.js';
 import {createDashboardLayer} from './layers/dashboard.js';
 
@@ -38,10 +38,11 @@ async function main(canvas) {
     level.entities.add(playerEnv);
 
 
-    level.comp.layers.push(createCollisionLayer(level));
+   // level.comp.layers.push(createCollisionLayer(level));
     level.comp.layers.push(createDashboardLayer(font, playerEnv));
 
-    const input = setupKeyboard(mario);
+    //const input = setupKeyboard(mario);
+    const input = setupTouchScreen(mario);
     input.listenTo(window);
 
     const timer = new Timer(1/60);

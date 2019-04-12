@@ -1,0 +1,31 @@
+{
+    "imageURL": "/img/tiles.png",
+
+    "frames": [
+        {
+            "name": "shine-1",
+            "rect": [384, 16, 16, 16]
+        },
+        {
+            "name": "shine-2",
+            "rect": [400, 16, 16, 16]
+        },
+        {
+            "name": "shine-3",
+            "rect": [416, 16, 16, 16]
+        }
+    ],
+
+    "animations": [
+        {
+            "name": "shine",
+            "frameLen": 0.12,
+            "frames": [
+                "shine-1",
+                "shine-1",
+                "shine-2",
+                "shine-3"
+            ]
+        }
+    ]
+}

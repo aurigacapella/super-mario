@@ -24,7 +24,8 @@ function setupEntities(levelSpec, level, entityFactory) {
     levelSpec.entities.forEach(({name, pos: [x, y]}) => {
         const createEntity = entityFactory[name];
         const entity = createEntity();
-        entity.pos.set(x, y);
+        // Modified the interpretation of the entity position to be tile based instead of pixel based.
+        entity.pos.set((x * 16) , (y* 16));
         level.entities.add(entity);
     });
 

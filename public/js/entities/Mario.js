@@ -5,6 +5,7 @@ import Killable from '../traits/Killable.js';
 import Physics from '../traits/Physics.js';
 import Solid from '../traits/Solid.js';
 import Stomper from '../traits/Stomper.js';
+import CoinCollector from '../traits/CoinCollector.js';
 import {loadSpriteSheet} from '../loaders.js';
 
 const SLOW_DRAG = 1/1000;
@@ -52,6 +53,7 @@ function createMarioFactory(sprite) {
         mario.addTrait(new Jump());
         mario.addTrait(new Killable());
         mario.addTrait(new Stomper());
+        mario.addTrait(new CoinCollector());
 
         mario.killable.removeAfter = 0;
 
